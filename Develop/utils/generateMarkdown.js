@@ -8,7 +8,7 @@ function renderLicenseBadge(license) {
     return '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)';
   }
   if(license === 'GNU GPL v3'){
-    return `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`;
+    return '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)';
   }
 }
 
@@ -19,10 +19,10 @@ function renderLicenseLink(license) {
     return '';
   }
   if(license === 'MIT License'){
-    return `This README generator is licensed under the `+ `[${license}](https://opensource.org/licenses/MIT)`;
+    return `This README generator is licensed under the [${license}](https://opensource.org/licenses/MIT)`;
   }
   if(license === 'GNU GPL v3'){
-    return `This README generator is licensed under the ` + `[${license}](https://www.gnu.org/licenses/gpl-3.0)`;
+    return `This README generator is licensed under the [${license}](https://www.gnu.org/licenses/gpl-3.0)`;
   }
 }
 
@@ -39,7 +39,8 @@ function renderLicenseSection(license) {
 
 // TODO: Create a function to generate markdown for README
 function generateMarkdown(data) {
-  return `# ${data.title}
+  return (
+  `# ${data.title}
   ${renderLicenseBadge(data.license)}
 
   ## Description
@@ -50,8 +51,8 @@ function generateMarkdown(data) {
   - [Usage](#usage)
   - [License](#license)
 
-  ## Installation
-  ${data.installation}
+  
+  ${data.installation !== '' ? '## Installation <br>' + data.installation : ''}
 
   ## Usage
   ${data.usage}
@@ -71,7 +72,8 @@ function generateMarkdown(data) {
   Feel free to reach out and contact me with any questions you may have.
   - GitHub: [${data.username}](https://github.com/${data.username})
   - Email: ${data.email}
-`;
+`
+  );
 }
 
 module.exports = generateMarkdown;

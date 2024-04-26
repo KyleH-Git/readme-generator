@@ -1,32 +1,32 @@
-# README Generator
+# SVG-Logo-Maker
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Description
-  An app to easily generate ReadMe files.
+  app to easily create SVG logos
 
   ## Table of Contents
   - [Installation](#installation)
   - [Usage](#usage)
   - [License](#license)
 
-  ## Installation
-  Requires that https://nodejs.org/en be installed to properly be able to run the JavaScript locally. You can clone the repository to your local machine, or copy the files directly from the repository.
+  
+  
 
   ## Usage
-  This app requires the Node JS RTE installed. To use the app using your command line navigate to the directory that has the index.js file downloaded from the repository. Once there, type the command node index.js to run the JavaScript. The command line will prompt you with several questions that when answered, will be converted to Markdown and stored in the README.md file inside of the develop folder.
+  Run the application by typing node index.js into shell. You will then be prompted to enter a logo name, name color, select a shape, and enter a shape color. The application will take the user input and turn it into a SVG logo stored in the examples directory.
 
   ## License
-    This README generator is licensed under the [MIT License](https://opensource.org/licenses/MIT)
+  This README generator is licensed under the [MIT License](https://opensource.org/licenses/MIT)
   
 
   ## Badges
   [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
   ## Contribute
-  N/A
+  
 
   ## Tests
-  N/A
+  Tests cover the render() function of the individual shape classes, comparing the output to expected output.
 
   ## Questions
   Feel free to reach out and contact me with any questions you may have.
